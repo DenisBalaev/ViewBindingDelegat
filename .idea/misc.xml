@@ -7,8 +7,14 @@
         <entry key="..\:/AndroidStudio-Practica/ViewBindingDelegat/app/src/main/res/drawable/button_background_start.xml" value="0.1755" />
         <entry key="..\:/AndroidStudio-Practica/ViewBindingDelegat/app/src/main/res/drawable/button_fill_animation.xml" value="0.1755" />
         <entry key="..\:/AndroidStudio-Practica/ViewBindingDelegat/app/src/main/res/drawable/ic_tick_bottom.xml" value="0.2595" />
+        <entry key="..\:/AndroidStudio-Practica/ViewBindingDelegat/app/src/main/res/drawable/rounder_tab_layout_view.xml" value="0.2585" />
+        <entry key="..\:/AndroidStudio-Practica/ViewBindingDelegat/app/src/main/res/drawable/selector_tab_layout_bacground.xml" value="0.2585" />
+        <entry key="..\:/AndroidStudio-Practica/ViewBindingDelegat/app/src/main/res/drawable/tab_indicator.xml" value="0.2585" />
         <entry key="..\:/AndroidStudio-Practica/ViewBindingDelegat/app/src/main/res/layout/activity_error.xml" value="0.25416666666666665" />
         <entry key="..\:/AndroidStudio-Practica/ViewBindingDelegat/app/src/main/res/layout/activity_main.xml" value="0.1" />
+        <entry key="..\:/AndroidStudio-Practica/ViewBindingDelegat/app/src/main/res/layout/activity_tab_layout.xml" value="0.25416666666666665" />
+        <entry key="..\:/AndroidStudio-Practica/ViewBindingDelegat/app/src/main/res/layout/fragment_sign_in.xml" value="0.25416666666666665" />
+        <entry key="..\:/AndroidStudio-Practica/ViewBindingDelegat/app/src/main/res/layout/fragment_sign_up.xml" value="0.25416666666666665" />
         <entry key="..\:/AndroidStudio-Practica/ViewBindingDelegat/app/src/main/res/layout/recyclerview_item.xml" value="0.25416666666666665" />
         <entry key="..\:/AndroidStudio-Practica/ViewBindingDelegat/app/src/main/res/layout/spinner_item.xml" value="0.25416666666666665" />
         <entry key="..\:/AndroidStudio-Practica/ViewBindingDelegat/app/src/main/res/xml/motion_scene.xml" value="0.25416666666666665" />

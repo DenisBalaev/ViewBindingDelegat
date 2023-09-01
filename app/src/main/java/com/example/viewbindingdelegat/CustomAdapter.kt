@@ -1,5 +1,6 @@
 package com.example.viewbindingdelegat
 
+import android.graphics.Color
 import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
@@ -10,15 +11,13 @@ import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 
+
 class CustomAdapter(
     private var items: MutableList<String>
 ) : RecyclerView.Adapter<CustomAdapter.ViewHolder>() {
 
-    var visibily = items.size
-
     class ViewHolder(view: View) : RecyclerView.ViewHolder(view) {
         val textView: TextView = view.findViewById(R.id.textViewLarge)
-        val liner: LinearLayout = view.findViewById(R.id.contener)
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
@@ -27,8 +26,8 @@ class CustomAdapter(
     }
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
-        holder.textView.text = items[position]
         Log.d("TEST", "onBindViewHolder")
+        holder.textView.text = items[position]
     }
 
     override fun getItemCount() = items.size
@@ -36,8 +35,7 @@ class CustomAdapter(
     fun setData(newList:MutableList<String>){
         val diffUtil = DiffCallback(items,newList)
         val diffResult = DiffUtil.calculateDiff(diffUtil)
-        items.clear()
-        items.addAll(newList)
+        items = newList
         diffResult.dispatchUpdatesTo(this)
     }
 }

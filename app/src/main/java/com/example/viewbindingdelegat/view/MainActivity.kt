@@ -1,11 +1,11 @@
-package com.example.viewbindingdelegat
+package com.example.viewbindingdelegat.view
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import by.kirich1409.viewbindingdelegate.viewBinding
+import com.example.viewbindingdelegat.MainActivityRecyclerViewHorizontalError
+import com.example.viewbindingdelegat.R
 import com.example.viewbindingdelegat.databinding.ActivityMainBinding
-import com.example.viewbindingdelegat.status.StatusActivity
-import com.example.viewbindingdelegat.tab_layout.TabLayoutActivity
 
 
 class MainActivity : AppCompatActivity(R.layout.activity_main) {

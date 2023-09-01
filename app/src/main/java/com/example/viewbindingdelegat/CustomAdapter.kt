@@ -6,11 +6,12 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.LinearLayout
 import android.widget.TextView
+import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 
 class CustomAdapter(
-    private val items: MutableList<String>
+    private var items: MutableList<String>
 ) : RecyclerView.Adapter<CustomAdapter.ViewHolder>() {
 
     var visibily = items.size
@@ -30,5 +31,13 @@ class CustomAdapter(
         Log.d("TEST", "onBindViewHolder")
     }
 
-    override fun getItemCount() = visibily
+    override fun getItemCount() = items.size
+
+    fun setData(newList:MutableList<String>){
+        val diffUtil = DiffCallback(items,newList)
+        val diffResult = DiffUtil.calculateDiff(diffUtil)
+        items.clear()
+        items.addAll(newList)
+        diffResult.dispatchUpdatesTo(this)
+    }
 }

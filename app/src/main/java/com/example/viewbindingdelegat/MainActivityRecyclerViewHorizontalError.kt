@@ -19,7 +19,7 @@ class MainActivityRecyclerViewHorizontalError : AppCompatActivity(R.layout.activ
         super.onCreate(savedInstanceState)
 
 
-        val dataList = fillList().toMutableList()
+        var dataList = fillList().toMutableList()
         val layoutManagers = LinearLayoutManager(this@MainActivityRecyclerViewHorizontalError,LinearLayoutManager.HORIZONTAL,false)
         val adapters = CustomAdapter(dataList)
 
@@ -37,10 +37,27 @@ class MainActivityRecyclerViewHorizontalError : AppCompatActivity(R.layout.activ
 
         }
 
+        val addListenerDiffUtil = object : View.OnLayoutChangeListener{
+            override fun onLayoutChange(v: View?, left: Int, top: Int, right: Int, bottom: Int, oldLeft: Int, oldTop: Int, oldRight: Int, oldBottom: Int) {
+                val lastVisibleItem: Int = layoutManagers.findLastCompletelyVisibleItemPosition()
+                if (lastVisibleItem > 0) {
+                    Log.d("TEST", "LastItem: $lastVisibleItem")
+                    adapters.visibily = lastVisibleItem + 1
+
+                    dataList = dataList.toMutableList()
+                    dataList[lastVisibleItem] = (dataList.size - lastVisibleItem).toString()
+                    dataList = dataList.slice(0..lastVisibleItem).toMutableList()
+                    binding.rv.removeOnLayoutChangeListener(this);
+                    (binding.rv.adapter as CustomAdapter).setData(dataList)
+                }
+            }
+
+        }
+
         binding.rv.apply {
             layoutManager = layoutManagers
             adapter = adapters
-            addOnLayoutChangeListener(addListener)
+            addOnLayoutChangeListener(addListenerDiffUtil)
         }
 
 

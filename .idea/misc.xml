@@ -12,9 +12,16 @@
         <entry key="..\:/AndroidStudio-Practica/ViewBindingDelegat/app/src/main/res/drawable/tab_indicator.xml" value="0.2585" />
         <entry key="..\:/AndroidStudio-Practica/ViewBindingDelegat/app/src/main/res/layout/activity_error.xml" value="0.25416666666666665" />
         <entry key="..\:/AndroidStudio-Practica/ViewBindingDelegat/app/src/main/res/layout/activity_main.xml" value="0.1" />
+        <entry key="..\:/AndroidStudio-Practica/ViewBindingDelegat/app/src/main/res/layout/activity_main_recycler_view_horizontal_error.xml" value="0.25416666666666665" />
+        <entry key="..\:/AndroidStudio-Practica/ViewBindingDelegat/app/src/main/res/layout/activity_status.xml" value="0.25416666666666665" />
         <entry key="..\:/AndroidStudio-Practica/ViewBindingDelegat/app/src/main/res/layout/activity_tab_layout.xml" value="0.25416666666666665" />
         <entry key="..\:/AndroidStudio-Practica/ViewBindingDelegat/app/src/main/res/layout/fragment_sign_in.xml" value="0.25416666666666665" />
         <entry key="..\:/AndroidStudio-Practica/ViewBindingDelegat/app/src/main/res/layout/fragment_sign_up.xml" value="0.25416666666666665" />
+        <entry key="..\:/AndroidStudio-Practica/ViewBindingDelegat/app/src/main/res/layout/item_car_status.xml" value="0.253125" />
+        <entry key="..\:/AndroidStudio-Practica/ViewBindingDelegat/app/src/main/res/layout/item_card_car_error.xml" value="0.253125" />
+        <entry key="..\:/AndroidStudio-Practica/ViewBindingDelegat/app/src/main/res/layout/item_error_recyclerview.xml" value="0.253125" />
+        <entry key="..\:/AndroidStudio-Practica/ViewBindingDelegat/app/src/main/res/layout/item_header_status.xml" value="0.253125" />
+        <entry key="..\:/AndroidStudio-Practica/ViewBindingDelegat/app/src/main/res/layout/item_title_tab_layout.xml" value="0.253125" />
         <entry key="..\:/AndroidStudio-Practica/ViewBindingDelegat/app/src/main/res/layout/recyclerview_item.xml" value="0.25416666666666665" />
         <entry key="..\:/AndroidStudio-Practica/ViewBindingDelegat/app/src/main/res/layout/spinner_item.xml" value="0.25416666666666665" />
         <entry key="..\:/AndroidStudio-Practica/ViewBindingDelegat/app/src/main/res/xml/motion_scene.xml" value="0.25416666666666665" />

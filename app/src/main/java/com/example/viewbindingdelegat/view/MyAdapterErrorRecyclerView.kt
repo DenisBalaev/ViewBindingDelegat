@@ -1,11 +1,11 @@
-package com.example.viewbindingdelegat
+package com.example.viewbindingdelegat.view
 
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
-import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import com.example.viewbindingdelegat.R
 
 class MyAdapterErrorRecyclerView(private val items: List<String>) : RecyclerView.Adapter<MyAdapterErrorRecyclerView.ViewHolder>() {
 

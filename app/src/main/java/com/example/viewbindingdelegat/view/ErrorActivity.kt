@@ -1,8 +1,9 @@
-package com.example.viewbindingdelegat
+package com.example.viewbindingdelegat.view
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import by.kirich1409.viewbindingdelegate.viewBinding
+import com.example.viewbindingdelegat.R
 import com.example.viewbindingdelegat.databinding.ActivityErrorBinding
 import com.google.android.flexbox.*
 

@@ -31,23 +31,35 @@ class MainActivityRecyclerViewHorizontalError : AppCompatActivity(R.layout.activ
             adapter = adapters
             addOnLayoutChangeListener(object : View.OnLayoutChangeListener{
                 override fun onLayoutChange(v: View?, left: Int, top: Int, right: Int, bottom: Int, oldLeft: Int, oldTop: Int, oldRight: Int, oldBottom: Int) {
-                    val lastVisibleItem: Int = layoutManagers.findLastCompletelyVisibleItemPosition()
+                    var lastVisibleItem: Int = layoutManagers.findLastVisibleItemPosition()
+
                     if (lastVisibleItem > 0) {
-                        Log.d("TEST", "LastItem: $lastVisibleItem")
+                        Log.d("2TEST", "LastItem1: $lastVisibleItem")
 
-                        val count = (dataList.size - lastVisibleItem).toString()
+                        val count = (dataList.size - lastVisibleItem)
                         dataList = dataList.toMutableList().slice(0..lastVisibleItem).toMutableList().apply {
-                            this[lastVisibleItem] = count
+                            this[lastVisibleItem] = count.toString()
                         }
-
-                        binding.rv.removeOnLayoutChangeListener(this);
+                        val li = this
                         binding.rv.apply {
-                            itemAnimator = null
-                            post{adapters.setData(dataList)}
+                            post {
+                                adapters.setData(dataList)
+
+                                val lastVisibleItemComp: Int = layoutManagers.findLastCompletelyVisibleItemPosition()
+                                Log.d("2TEST", "LastItem2: $lastVisibleItem $lastVisibleItemComp")
+
+                                if (lastVisibleItem != lastVisibleItemComp){
+                                    binding.rv.removeOnLayoutChangeListener(li);
+                                    dataList = dataList.toMutableList().slice(0..lastVisibleItemComp).toMutableList().apply {
+                                        this[lastVisibleItemComp] = (count + 1).toString()
+                                    }
+                                    adapters.setData(dataList)
+                                }
+                            }
+
                         }
                     }
                 }
-
             })
         }
 

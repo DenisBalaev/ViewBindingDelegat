@@ -26,29 +26,29 @@ class MainActivityRecyclerViewHorizontalError : AppCompatActivity(R.layout.activ
         val layoutManagers = LinearLayoutManager(this@MainActivityRecyclerViewHorizontalError,LinearLayoutManager.HORIZONTAL,false)
         val adapters = CustomAdapter(dataList)
 
-        val addListenerDiffUtil = object : View.OnLayoutChangeListener{
-            override fun onLayoutChange(v: View?, left: Int, top: Int, right: Int, bottom: Int, oldLeft: Int, oldTop: Int, oldRight: Int, oldBottom: Int) {
-                val lastVisibleItem: Int = layoutManagers.findLastCompletelyVisibleItemPosition()
-                if (lastVisibleItem > 0) {
-                    Log.d("TEST", "LastItem: $lastVisibleItem")
-                    val count = (dataList.size - lastVisibleItem).toString()
-                    dataList = dataList.toMutableList().slice(0..lastVisibleItem).toMutableList().apply {
-                        this[lastVisibleItem] = count
-                    }
-                    binding.rv.removeOnLayoutChangeListener(this);
-                    binding.rv.apply {
-                        itemAnimator = null
-                        post{adapters.setData(dataList)}
-                    }
-                }
-            }
-
-        }
-
         binding.rv.apply {
             layoutManager = layoutManagers
             adapter = adapters
-            addOnLayoutChangeListener(addListenerDiffUtil)
+            addOnLayoutChangeListener(object : View.OnLayoutChangeListener{
+                override fun onLayoutChange(v: View?, left: Int, top: Int, right: Int, bottom: Int, oldLeft: Int, oldTop: Int, oldRight: Int, oldBottom: Int) {
+                    val lastVisibleItem: Int = layoutManagers.findLastCompletelyVisibleItemPosition()
+                    if (lastVisibleItem > 0) {
+                        Log.d("TEST", "LastItem: $lastVisibleItem")
+
+                        val count = (dataList.size - lastVisibleItem).toString()
+                        dataList = dataList.toMutableList().slice(0..lastVisibleItem).toMutableList().apply {
+                            this[lastVisibleItem] = count
+                        }
+
+                        binding.rv.removeOnLayoutChangeListener(this);
+                        binding.rv.apply {
+                            itemAnimator = null
+                            post{adapters.setData(dataList)}
+                        }
+                    }
+                }
+
+            })
         }
 
 

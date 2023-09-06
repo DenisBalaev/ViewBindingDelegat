@@ -6,23 +6,37 @@
         <entry key="..\:/AndroidStudio-Practica/ViewBindingDelegat/app/src/main/res/drawable/button_background.xml" value="0.1755" />
         <entry key="..\:/AndroidStudio-Practica/ViewBindingDelegat/app/src/main/res/drawable/button_background_start.xml" value="0.1755" />
         <entry key="..\:/AndroidStudio-Practica/ViewBindingDelegat/app/src/main/res/drawable/button_fill_animation.xml" value="0.1755" />
+        <entry key="..\:/AndroidStudio-Practica/ViewBindingDelegat/app/src/main/res/drawable/ic_arrow_forward_right.xml" value="0.1" />
+        <entry key="..\:/AndroidStudio-Practica/ViewBindingDelegat/app/src/main/res/drawable/ic_bottom_dialog_close.xml" value="0.256" />
+        <entry key="..\:/AndroidStudio-Practica/ViewBindingDelegat/app/src/main/res/drawable/ic_search.xml" value="0.256" />
         <entry key="..\:/AndroidStudio-Practica/ViewBindingDelegat/app/src/main/res/drawable/ic_tick_bottom.xml" value="0.2595" />
+        <entry key="..\:/AndroidStudio-Practica/ViewBindingDelegat/app/src/main/res/drawable/rounder_bottom_dialog_history_code.xml" value="0.2595" />
+        <entry key="..\:/AndroidStudio-Practica/ViewBindingDelegat/app/src/main/res/drawable/rounder_button_action_command.xml" value="0.256" />
+        <entry key="..\:/AndroidStudio-Practica/ViewBindingDelegat/app/src/main/res/drawable/rounder_search.xml" value="0.255" />
         <entry key="..\:/AndroidStudio-Practica/ViewBindingDelegat/app/src/main/res/drawable/rounder_tab_layout_view.xml" value="0.2585" />
         <entry key="..\:/AndroidStudio-Practica/ViewBindingDelegat/app/src/main/res/drawable/selector_tab_layout_bacground.xml" value="0.2585" />
         <entry key="..\:/AndroidStudio-Practica/ViewBindingDelegat/app/src/main/res/drawable/tab_indicator.xml" value="0.2585" />
+        <entry key="..\:/AndroidStudio-Practica/ViewBindingDelegat/app/src/main/res/layout/activity_bottom_sheet.xml" value="0.25052083333333336" />
         <entry key="..\:/AndroidStudio-Practica/ViewBindingDelegat/app/src/main/res/layout/activity_error.xml" value="0.25416666666666665" />
         <entry key="..\:/AndroidStudio-Practica/ViewBindingDelegat/app/src/main/res/layout/activity_main.xml" value="0.1" />
         <entry key="..\:/AndroidStudio-Practica/ViewBindingDelegat/app/src/main/res/layout/activity_main_recycler_view_horizontal_error.xml" value="0.25416666666666665" />
         <entry key="..\:/AndroidStudio-Practica/ViewBindingDelegat/app/src/main/res/layout/activity_status.xml" value="0.25416666666666665" />
         <entry key="..\:/AndroidStudio-Practica/ViewBindingDelegat/app/src/main/res/layout/activity_tab_layout.xml" value="0.25416666666666665" />
+        <entry key="..\:/AndroidStudio-Practica/ViewBindingDelegat/app/src/main/res/layout/bottom_dialog_actions_commands.xml" value="0.25052083333333336" />
+        <entry key="..\:/AndroidStudio-Practica/ViewBindingDelegat/app/src/main/res/layout/bottom_dialog_command_car_screen.xml" value="0.25052083333333336" />
+        <entry key="..\:/AndroidStudio-Practica/ViewBindingDelegat/app/src/main/res/layout/bottom_dialog_command_car_screen_2.xml" value="0.253125" />
         <entry key="..\:/AndroidStudio-Practica/ViewBindingDelegat/app/src/main/res/layout/fragment_sign_in.xml" value="0.25416666666666665" />
         <entry key="..\:/AndroidStudio-Practica/ViewBindingDelegat/app/src/main/res/layout/fragment_sign_up.xml" value="0.25416666666666665" />
+        <entry key="..\:/AndroidStudio-Practica/ViewBindingDelegat/app/src/main/res/layout/item_bottom_sheet_command_filtrtion.xml" value="0.25052083333333336" />
+        <entry key="..\:/AndroidStudio-Practica/ViewBindingDelegat/app/src/main/res/layout/item_bottom_sheet_command_list.xml" value="0.25052083333333336" />
         <entry key="..\:/AndroidStudio-Practica/ViewBindingDelegat/app/src/main/res/layout/item_car_status.xml" value="0.253125" />
         <entry key="..\:/AndroidStudio-Practica/ViewBindingDelegat/app/src/main/res/layout/item_card_car_error.xml" value="0.253125" />
+        <entry key="..\:/AndroidStudio-Practica/ViewBindingDelegat/app/src/main/res/layout/item_card_command.xml" value="0.25052083333333336" />
         <entry key="..\:/AndroidStudio-Practica/ViewBindingDelegat/app/src/main/res/layout/item_error_recyclerview.xml" value="0.253125" />
         <entry key="..\:/AndroidStudio-Practica/ViewBindingDelegat/app/src/main/res/layout/item_header_status.xml" value="0.253125" />
         <entry key="..\:/AndroidStudio-Practica/ViewBindingDelegat/app/src/main/res/layout/item_title_tab_layout.xml" value="0.253125" />
         <entry key="..\:/AndroidStudio-Practica/ViewBindingDelegat/app/src/main/res/layout/recyclerview_item.xml" value="0.25416666666666665" />
+        <entry key="..\:/AndroidStudio-Practica/ViewBindingDelegat/app/src/main/res/layout/search_panel.xml" value="0.24947916666666667" />
         <entry key="..\:/AndroidStudio-Practica/ViewBindingDelegat/app/src/main/res/layout/spinner_item.xml" value="0.25416666666666665" />
         <entry key="..\:/AndroidStudio-Practica/ViewBindingDelegat/app/src/main/res/xml/motion_scene.xml" value="0.25416666666666665" />
         <entry key="..\:/AndroidStudio-Practica/ViewBindingDelegat/app/src/main/res/xml/scene.xml" value="0.25416666666666665" />

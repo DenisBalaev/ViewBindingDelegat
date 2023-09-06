@@ -1,15 +1,14 @@
 package com.example.viewbindingdelegat
 
-import android.graphics.Color
 import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.LinearLayout
 import android.widget.TextView
 import androidx.recyclerview.widget.DiffUtil
-import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import com.google.android.flexbox.AlignItems
+import com.google.android.flexbox.FlexboxLayoutManager
 
 
 class CustomAdapter(
@@ -28,6 +27,13 @@ class CustomAdapter(
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         Log.d("TEST", "onBindViewHolder")
         holder.textView.text = items[position]
+        val lp: ViewGroup.LayoutParams = holder.itemView.layoutParams
+        if (lp is FlexboxLayoutManager.LayoutParams) {
+            val flexboxLp = lp
+            flexboxLp.flexShrink = 0.0f
+            flexboxLp.alignSelf =
+                AlignItems.FLEX_START //this will align each itemView on Top or use AlignItems.FLEX_END to align it at Bottom
+        }
     }
 
     override fun getItemCount() = items.size

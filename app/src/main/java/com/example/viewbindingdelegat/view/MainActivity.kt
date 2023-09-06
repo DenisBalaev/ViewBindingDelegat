@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity
 import by.kirich1409.viewbindingdelegate.viewBinding
 import com.example.viewbindingdelegat.MainActivityRecyclerViewHorizontalError
 import com.example.viewbindingdelegat.R
+import com.example.viewbindingdelegat.bottomsheet.BottomSheetActivity
 import com.example.viewbindingdelegat.databinding.ActivityMainBinding
 
 
@@ -25,7 +26,7 @@ class MainActivity : AppCompatActivity(R.layout.activity_main) {
         )
         spinner.adapter = adapter*/
 
-        startActivity(Intent(this, MainActivityRecyclerViewHorizontalError::class.java))
+        startActivity(Intent(this, BottomSheetActivity::class.java))
         finish()
 
         /*val dataList = fillList().toMutableList()

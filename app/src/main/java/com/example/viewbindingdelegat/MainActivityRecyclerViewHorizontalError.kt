@@ -9,6 +9,10 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import by.kirich1409.viewbindingdelegate.viewBinding
 import com.example.viewbindingdelegat.databinding.ActivityMainRecyclerViewHorizontalErrorBinding
+import com.google.android.flexbox.FlexDirection
+import com.google.android.flexbox.FlexWrap
+import com.google.android.flexbox.FlexboxLayoutManager
+import com.google.android.flexbox.JustifyContent
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
@@ -23,46 +27,106 @@ class MainActivityRecyclerViewHorizontalError : AppCompatActivity(R.layout.activ
 
 
         var dataList = fillList().toMutableList()
-        val layoutManagers = LinearLayoutManager(this@MainActivityRecyclerViewHorizontalError,LinearLayoutManager.HORIZONTAL,false)
+        val layoutManagerError = LinearLayoutManager(this@MainActivityRecyclerViewHorizontalError,LinearLayoutManager.HORIZONTAL,false)
         val adapters = CustomAdapter(dataList)
 
         binding.rv.apply {
-            layoutManager = layoutManagers
+            layoutManager = layoutManagerError
             adapter = adapters
             addOnLayoutChangeListener(object : View.OnLayoutChangeListener{
                 override fun onLayoutChange(v: View?, left: Int, top: Int, right: Int, bottom: Int, oldLeft: Int, oldTop: Int, oldRight: Int, oldBottom: Int) {
-                    var lastVisibleItem: Int = layoutManagers.findLastVisibleItemPosition()
-
+                    val lastVisibleItem: Int = layoutManagerError.findLastVisibleItemPosition()
                     if (lastVisibleItem > 0) {
-                        Log.d("2TEST", "LastItem1: $lastVisibleItem")
-
-                        val count = (dataList.size - lastVisibleItem)
+                        val count = "+${dataList.size - lastVisibleItem}"
                         dataList = dataList.toMutableList().slice(0..lastVisibleItem).toMutableList().apply {
-                            this[lastVisibleItem] = count.toString()
+                            this[lastVisibleItem] = count
                         }
-                        val li = this
+
+                        binding.rv.removeOnLayoutChangeListener(this);
                         binding.rv.apply {
-                            post {
-                                adapters.setData(dataList)
-
-                                val lastVisibleItemComp: Int = layoutManagers.findLastCompletelyVisibleItemPosition()
-                                Log.d("2TEST", "LastItem2: $lastVisibleItem $lastVisibleItemComp")
-
-                                if (lastVisibleItem != lastVisibleItemComp){
-                                    binding.rv.removeOnLayoutChangeListener(li);
-                                    dataList = dataList.toMutableList().slice(0..lastVisibleItemComp).toMutableList().apply {
-                                        this[lastVisibleItemComp] = (count + 1).toString()
-                                    }
-                                    adapters.setData(dataList)
-                                }
-                            }
-
+                            itemAnimator = null
+                            post{(this.adapter as CustomAdapter).setData(dataList)}
                         }
                     }
                 }
             })
         }
 
+        var dataList2 = fillList().toMutableList()
+        val layoutManagerError2 = LinearLayoutManager(this@MainActivityRecyclerViewHorizontalError,LinearLayoutManager.HORIZONTAL,false)
+        val adapters2 = CustomAdapter(dataList2)
+
+        binding.rv2.apply {
+            layoutManager = layoutManagerError2
+            adapter = adapters2
+            addOnLayoutChangeListener(object : View.OnLayoutChangeListener{
+                override fun onLayoutChange(v: View?, left: Int, top: Int, right: Int, bottom: Int, oldLeft: Int, oldTop: Int, oldRight: Int, oldBottom: Int) {
+                    val lastVisibleItem: Int = layoutManagerError2.findLastCompletelyVisibleItemPosition()
+                    if (lastVisibleItem > 0) {
+                        val count = "+${dataList2.size - lastVisibleItem}"
+                        dataList2 = dataList2.toMutableList().slice(0..lastVisibleItem).toMutableList().apply {
+                            this[lastVisibleItem] = count
+                        }
+
+                        binding.rv2.removeOnLayoutChangeListener(this);
+                        binding.rv2.apply {
+                            itemAnimator = null
+                            post{(this.adapter as CustomAdapter).setData(dataList2)}
+                        }
+                    }
+                }
+            })
+        }
+
+        val dataList3 = fillList().toMutableList()
+        val layoutManagerError3 = LinearLayoutManager(this@MainActivityRecyclerViewHorizontalError,LinearLayoutManager.HORIZONTAL,false)
+        val adapters3 = CustomAdapter(dataList3)
+
+        binding.rv3.apply {
+            layoutManager = layoutManagerError3
+            adapter = adapters3
+            /*addOnLayoutChangeListener(object : View.OnLayoutChangeListener{
+                override fun onLayoutChange(v: View?, left: Int, top: Int, right: Int, bottom: Int, oldLeft: Int, oldTop: Int, oldRight: Int, oldBottom: Int) {
+                    val lastVisibleItem: Int = layoutManagerError3.findLastVisibleItemPosition()
+
+                    if (lastVisibleItem > 0) {
+                        val count = (dataList3.size - lastVisibleItem)
+                        dataList3 = dataList3.toMutableList().slice(0..lastVisibleItem).toMutableList().apply {
+                            this[lastVisibleItem] = count.toString()
+                        }
+                        val li = this
+                        binding.rv3.apply {
+                            post {
+                                adapters3.setData(dataList3)
+                                val lastVisibleItemComp: Int = layoutManagerError3.findLastCompletelyVisibleItemPosition()
+                                if (lastVisibleItem != lastVisibleItemComp){
+                                    binding.rv3.removeOnLayoutChangeListener(li);
+                                    dataList3 = dataList3.toMutableList().slice(0..lastVisibleItemComp).toMutableList().apply {
+                                        this[lastVisibleItemComp] = "+"+(count + 1).toString()
+                                    }
+                                    adapters3.setData(dataList3)
+                                }
+                            }
+                        }
+                    }
+                }
+            })*/
+        }
+
+
+        /*val lilm = FlexboxLayoutManager(this@MainActivityRecyclerViewHorizontalError).apply {
+            flexWrap = FlexWrap.WRAP
+            flexDirection = FlexDirection.ROW
+            justifyContent = JustifyContent.FLEX_START
+        }
+
+        binding.btnf.setOnClickListener {
+            binding.rv3.apply {
+                layoutManager = null
+                layoutManager =  lilm
+                this.invalidate()
+            }
+        }*/
 
         /*binding.rv.post {
             val lastVisibleItem =layoutManagers.findLastCompletelyVisibleItemPosition()
@@ -75,7 +139,7 @@ class MainActivityRecyclerViewHorizontalError : AppCompatActivity(R.layout.activ
 
     private fun fillList(): List<String> {
         val data = mutableListOf<String>()
-        (0..10).forEach { i -> data.add("$i elqqk") }
+        (0..10).forEach { i -> data.add("$i ek444") }
         return data
     }
 }

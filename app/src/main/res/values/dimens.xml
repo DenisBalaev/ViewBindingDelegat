@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="marginTop_recyclerView_HistoryEvents">8dp</dimen>
+    <dimen name="marginTop_recyclerView_HistoryCode">12dp</dimen>
+
+    <dimen name="marginEnd_recyclerView_Filtration_Car">10dp</dimen>
+
+    <dimen name="marginBottom_recyclerView_Filling_Cad_Car">12dp</dimen>
+    <dimen name="marginStart_recyclerView_Error_Cad_Car">8dp</dimen>
+
+    <dimen name="marginEnd_recyclerView_Error_Status">8dp</dimen>
+    <dimen name="marginTop_recyclerView_Error_Status">8dp</dimen>
+
+    <dimen name="marginTop_recyclerView_Filtration_BottomSheet">8dp</dimen>
+    <dimen name="marginEnd_recyclerView_Filtration_BottomSheet">8dp</dimen>
+
+    <dimen name="marginTop_recyclerView_Command_BottomSheet">13dp</dimen>
+</resources>

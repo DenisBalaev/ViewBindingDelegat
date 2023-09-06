@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TextView
+    android:id="@+id/text_filtration"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="Cup and Lid"
+    android:textSize="15sp"
+    android:textColor="@color/gray_DADADA"
+    android:background="@drawable/rounder_filter_bottom_sheet"
+    android:paddingHorizontal="16dp"
+    android:paddingVertical="8dp"
+    android:maxLines="1"
+    />

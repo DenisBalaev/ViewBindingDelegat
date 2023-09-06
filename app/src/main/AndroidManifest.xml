@@ -14,10 +14,13 @@
         android:theme="@style/Theme.ViewBindingDelegat"
         tools:targetApi="31">
         <activity
+            android:name=".bottomsheet.BottomSheetActivity"
+            android:exported="false" />
+        <activity
             android:name=".MainActivityRecyclerViewHorizontalError"
             android:exported="false" />
         <activity
-            android:name=".StatusActivity"
+            android:name=".status.StatusActivity"
             android:exported="false" />
         <activity
             android:name=".tab_layout.TabLayoutActivity"

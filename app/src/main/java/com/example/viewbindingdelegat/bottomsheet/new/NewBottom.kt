@@ -79,7 +79,6 @@ class NewBottom(private val context: Context, private val layoutInflater: Layout
 
     init {
         bottomSheetDialog.setContentView(binding.root)
-        bottomSheetDialog.setCancelable(false)
     }
 
     fun show(){

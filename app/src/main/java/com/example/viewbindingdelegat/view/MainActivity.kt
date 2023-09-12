@@ -58,12 +58,13 @@ class MainActivity : AppCompatActivity(R.layout.activity_main) {
             addOnLayoutChangeListener(object : View.OnLayoutChangeListener{
                 override fun onLayoutChange(v: View?, left: Int, top: Int, right: Int, bottom: Int, oldLeft: Int, oldTop: Int, oldRight: Int, oldBottom: Int) {
                     val lastVisibleItem: Int = layoutManagerError.findLastVisibleItemPosition()
+                    val lastVisibleItemCompletely: Int = layoutManagerError.findLastCompletelyVisibleItemPosition()
                     indexLastVisibleItemPosition = lastVisibleItem
-                    if (lastVisibleItem > 0) {
+                    if (lastVisibleItem > 0 && lastVisibleItemCompletely < dataList.size - 1 && lastVisibleItem != lastVisibleItemCompletely) {
                         update(dataList, lastVisibleItem)
-
-                        binding.rvError2.removeOnLayoutChangeListener(this);
                     }
+
+                    binding.rvError2.removeOnLayoutChangeListener(this);
                 }
             })
 
